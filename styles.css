@@ -54,8 +54,23 @@ button:hover {
   color: cyan;
 }
 
-.avatar:hover {
-  transform: scale(1.05);
-  transition: transform 0.3s ease;
+@keyframes glowRotate {
+  0% {
+    transform: rotate(0deg) scale(1);
+    box-shadow: 0 0 5px cyan;
+  }
+  50% {
+    transform: rotate(3deg) scale(1.1);
+    box-shadow: 0 0 20px cyan;
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
+    box-shadow: 0 0 5px cyan;
+  }
 }
+
+.avatar:hover {
+  animation: glowRotate 0.8s ease-in-out;
+}
+
 
